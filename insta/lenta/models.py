@@ -66,7 +66,7 @@ class Profile(models.Model):
     image = models.ImageField(default='default.png', upload_to='profile_pics')
     city = models.CharField(max_length=100, blank=True,)
     description = models.CharField(max_length=100, blank=True,)
-    phone = models.IntegerField(default=0, blank=True,)
+    phone = models.IntegerField(blank=True,)
 
 
     def __str__(self):
