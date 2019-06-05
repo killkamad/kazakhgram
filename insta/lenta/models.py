@@ -35,10 +35,9 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.likes
-
-    def __repr__(self):
-        return self.likes
+        if self.text==None:
+            return "ERROR-TEXT NAME IS NULL"
+        return "Author = {}, Text = {}".format(self.author, self.text)
 
     def approved_comments(self):
         return self.comments.filter(approved_comment=True)
