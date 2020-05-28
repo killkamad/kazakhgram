@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd7*r2yu!t-o=s^^^o6&!7_bivhq$w+5e^h#o(evb6$9ily9-1-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['kazakhgram.herokuapp.com', '127.0.0.1']
 
@@ -137,4 +137,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 LOGIN_REDIRECT_URL='com_list'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 django_heroku.settings(locals())
